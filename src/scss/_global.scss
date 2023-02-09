@@ -7,7 +7,17 @@ body {
   font-family: var(--font-main);
 }
 
+body.dark {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
 .app {
   width: u.fluid(320px, 1440px, 280px, 1100px);
   margin-inline: auto;
+}
+
+textarea {
+  resize: none;
+  line-height: 1.5;
 }

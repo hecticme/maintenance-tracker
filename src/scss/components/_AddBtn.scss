@@ -1,0 +1,22 @@
+@forward "../variables";
+@use "../utils" as u;
+
+.add-btn {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  background-color: var(--clr-green);
+  width: u.rem(40);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-property: transform, box-shadow, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-bezier);
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 20px 60px 0px;
+    opacity: 0.8;
+  }
+}

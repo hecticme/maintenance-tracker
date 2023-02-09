@@ -1,2 +1,130 @@
 @forward "../variables";
 @use "../utils" as u;
+
+.card {
+  display: flex;
+  gap: u.rem(40);
+  width: 100%;
+  margin-block-end: u.rem(40);
+
+  &__time {
+    display: flex;
+    gap: u.rem(20);
+    flex-direction: column;
+
+    &__last,
+    &__span,
+    &__estimate {
+      font-weight: var(--fw-bold);
+      color: var(--clr-gray-dark);
+      font-size: u.fluid(320px, 1440px, 12px, 18px);
+    }
+
+    &__span {
+      display: flex;
+      place-items: center;
+      gap: u.fluid(320px, 1440px, 5px, 10px);
+      color: var(--clr-black);
+      white-space: nowrap;
+
+      &__dot {
+        background-color: var(--clr-black);
+        width: u.fluid(320px, 1440px, 10px, 16px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: u.rem(10);
+    position: relative;
+    flex-grow: 1;
+
+    &__divider {
+      width: u.fluid(320px, 1440px, 8px, 12px);
+      height: u.rem(110);
+      background-color: var(--clr-green);
+      border-radius: 100vh;
+    }
+
+    &__body {
+      min-height: u.rem(100);
+      width: 100%;
+      padding: u.rem(20);
+      border-radius: 10px;
+      background-color: var(--clr-white);
+      box-shadow: rgba(100, 100, 111, 0.1) 0px 10px 40px 0px;
+
+      &__name {
+        font-size: u.fluid(320px, 1440px, 18px, 22px);
+        font-weight: var(--fw-bold);
+        margin-block-end: u.rem(10);
+      }
+
+      &__description {
+        line-height: 1.5;
+      }
+    }
+
+    &__close-btn {
+      position: absolute;
+      right: u.rem(-12);
+      top: u.rem(-12);
+      color: var(--clr-red);
+      width: u.rem(25);
+      height: u.rem(25);
+      cursor: pointer;
+      transition: transform 250ms var(--transition-bezier),
+        opacity 250ms var(--transition-bezier);
+
+      &:hover {
+        transform: scale(1.2);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  // Dark Theme
+  &.dark {
+    .card {
+      &__time {
+        &__last,
+        &__estimate {
+          color: var(--clr-gray-dim);
+        }
+
+        &__span {
+          color: var(--clr-white);
+
+          &__dot {
+            background-color: var(--clr-white);
+          }
+        }
+      }
+
+      &__info {
+        &__body {
+          background-color: var(--clr-black-dim);
+
+          &__description {
+            color: var(--clr-gray-dim);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: u.em(670)) {
+  .card {
+    flex-direction: column;
+    gap: u.rem(20);
+
+    &__time {
+      flex-direction: row;
+      gap: u.fluid(320px, 670px, 5px, 20px);
+    }
+  }
+}
