@@ -1,5 +1,10 @@
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="app">
+      <UtilBar />
+      <MaintenanceList />
+    </div>
+  );
 }
 
 export default App;

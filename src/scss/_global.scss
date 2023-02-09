@@ -1,0 +1,13 @@
+@forward "variables";
+@use "utils" as u;
+
+body {
+  background-color: var(--clr-gray);
+  color: var(--clr-black);
+  font-family: var(--font-main);
+}
+
+.app {
+  width: u.fluid(320px, 1440px, 280px, 1100px);
+  margin-inline: auto;
+}

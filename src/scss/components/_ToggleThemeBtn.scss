@@ -1,0 +1,40 @@
+@forward "../variables";
+@use "../utils" as u;
+
+.toggle-theme-btn {
+  display: flex;
+  place-items: center;
+  width: u.rem(40);
+  height: u.rem(20);
+  border-radius: 100vh;
+  background-color: var(--clr-black);
+  cursor: pointer;
+  transition: box-shadow 200ms var(--transition-bezier);
+
+  &__circle {
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: var(--clr-white);
+    border: u.rem(3) solid var(--clr-black);
+    border-radius: 50%;
+    transition: transform 200ms ease-in-out;
+  }
+
+  &:is(:hover, :active) {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+
+.toggle-theme-btn.dark {
+  background-color: var(--clr-white);
+
+  &:is(:hover, :active) {
+    box-shadow: rgba(255, 255, 255, 0.65) 0px 7px 29px 0px;
+  }
+
+  .toggle-theme-btn__circle {
+    background-color: var(--clr-black);
+    border: u.rem(3) solid var(--clr-white);
+    transform: translateX(100%);
+  }
+}
