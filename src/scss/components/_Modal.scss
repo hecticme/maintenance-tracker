@@ -78,6 +78,11 @@
         opacity: 0.8;
       }
     }
+
+    ::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+      padding: u.rem(10);
+    }
   }
 
   &__close-btn {
@@ -103,9 +108,15 @@
     .modal {
       &__form {
         input,
-        textarea {
+        textarea,
+        select {
           background-color: var(--clr-black);
           color: var(--clr-white);
+        }
+
+        ::-webkit-calendar-picker-indicator {
+          background-color: var(--clr-gray-dim);
+          border-radius: u.rem(5);
         }
       }
     }

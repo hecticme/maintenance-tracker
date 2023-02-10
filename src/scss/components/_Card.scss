@@ -3,12 +3,13 @@
 
 .card {
   display: flex;
-  gap: u.rem(40);
+  gap: u.rem(30);
   width: 100%;
   margin-block-end: u.rem(40);
 
   &__time {
     display: flex;
+    width: u.fluid(670px, 1440px, 160px, 210px);
     gap: u.rem(20);
     flex-direction: column;
 
@@ -64,6 +65,7 @@
       }
 
       &__description {
+        font-size: u.fluid(320px, 1440px, 16px, 18px);
         line-height: 1.5;
       }
     }
@@ -124,6 +126,7 @@
 
     &__time {
       flex-direction: row;
+      width: auto;
       gap: u.fluid(320px, 670px, 5px, 20px);
     }
   }
