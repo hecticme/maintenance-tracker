@@ -11,7 +11,13 @@ export function useMaintenance() {
 export const MaintenanceProvider = ({ children }) => {
   const [maintenance, setMaintenance] = useLocalStorage("maintenance", []);
 
-  function addMaintenance(name, description) {
+  function addMaintenance(
+    name,
+    description,
+    lastDate,
+    spanDate,
+    spanDateFormat
+  ) {
     setMaintenance((prevMaintenance) => {
       return [
         ...prevMaintenance,
@@ -19,6 +25,9 @@ export const MaintenanceProvider = ({ children }) => {
           id: uuidv4(),
           name: name,
           description: description,
+          lastDate: lastDate,
+          spanDate: spanDate,
+          spanDateFormat: spanDateFormat,
         },
       ];
     });

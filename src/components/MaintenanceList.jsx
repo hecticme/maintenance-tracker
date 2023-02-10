@@ -13,6 +13,9 @@ export const MaintenanceList = () => {
             id={value.id}
             name={value.name}
             description={value.description}
+            lastDate={value.lastDate}
+            spanDate={value.spanDate}
+            spanDateFormat={value.spanDateFormat}
           />
         );
       })}
