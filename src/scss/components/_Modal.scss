@@ -22,11 +22,12 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: u.rem(10);
+    gap: u.rem(15);
     width: 80%;
 
     & label {
       font-weight: var(--fw-bold);
+      font-size: u.fluid(320px, 1440px, 16px, 20px);
     }
 
     & input,
@@ -36,14 +37,16 @@
       border: none;
       padding: u.rem(10);
       margin-block-end: u.rem(10);
+      font-size: u.fluid(320px, 1440px, 14px, 18px);
     }
 
     &__submit {
-      width: u.rem(130);
-      height: u.rem(58);
+      width: u.fluid(320px, 1440px, 100px, 130px);
+      aspect-ratio: 13 / 5;
       background-color: var(--clr-green);
       color: var(--clr-white);
       font-weight: var(--fw-bold);
+      font-size: u.fluid(320px, 1440px, 16px, 20px);
       margin-inline: auto;
       margin-block-start: u.rem(20);
       border: none;
@@ -62,8 +65,8 @@
   }
 
   &__close-btn {
-    width: u.rem(40);
-    height: u.rem(40);
+    width: u.fluid(320px, 1440px, 30px, 40px);
+    height: u.fluid(320px, 1440px, 30px, 40px);
     color: var(--clr-red);
     position: absolute;
     top: u.rem(10);

@@ -11,7 +11,10 @@ function App() {
       <UtilBar setIsModalOpen={setIsModalOpen} />
       <MaintenanceList />
       <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-      <div className={`overlay ${isModalOpen ? "show" : ""}`}></div>
+      <div
+        className={`overlay ${isModalOpen ? "show" : ""}`}
+        onClick={() => setIsModalOpen(false)}
+      ></div>
     </div>
   );
 }
