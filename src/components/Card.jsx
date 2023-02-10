@@ -1,8 +1,11 @@
 import { IoIosCloseCircle } from "react-icons/io";
 import { useTheme } from "../contexts/ThemeContext";
+import { useMaintenance } from "../contexts/MaintenanceContext";
 
-export const Card = () => {
+export const Card = ({ id, name, description }) => {
   const [darkTheme] = useTheme();
+  const { deleteMaintenance } = useMaintenance();
+
   return (
     <div className={`card ${darkTheme ? "dark" : ""}`}>
       <div className="card__time">
@@ -16,10 +19,13 @@ export const Card = () => {
       <div className="card__info">
         <div className="card__info__divider"></div>
         <div className="card__info__body">
-          <h2 className="card__info__body__name">Braces</h2>
-          <p className="card__info__body__description">lorem30</p>
+          <h2 className="card__info__body__name">{name}</h2>
+          <p className="card__info__body__description">{description}</p>
         </div>
-        <IoIosCloseCircle className="card__info__close-btn" />
+        <IoIosCloseCircle
+          className="card__info__close-btn"
+          onClick={() => deleteMaintenance(id)}
+        />
       </div>
     </div>
   );

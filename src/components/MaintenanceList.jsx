@@ -1,10 +1,21 @@
 import { Card } from "./Card";
+import { useMaintenance } from "../contexts/MaintenanceContext";
 
 export const MaintenanceList = () => {
+  const { maintenance } = useMaintenance();
+
   return (
     <div className="maintenance-list">
-      <Card />
-      <Card />
+      {maintenance.map((value) => {
+        return (
+          <Card
+            key={value.id}
+            id={value.id}
+            name={value.name}
+            description={value.description}
+          />
+        );
+      })}
     </div>
   );
 };

@@ -2,15 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { ThemeProvider } from "./contexts/ThemeContext";
-// import { MaintenanceProvider } from "./contexts/MaintenanceContext";
+import { MaintenanceProvider } from "./contexts/MaintenanceContext";
 import "./scss/styles.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
-      {/* <MaintenanceProvider> */}
-      <App />
-      {/* </MaintenanceProvider> */}
+      <MaintenanceProvider>
+        <App />
+      </MaintenanceProvider>
     </ThemeProvider>
   </React.StrictMode>
 );
