@@ -7,7 +7,7 @@
   place-items: center;
   background-color: var(--clr-white);
   width: u.fluid(320px, 1440px, 280px, 800px);
-  height: u.rem(700);
+  height: u.fluid(320px, 1440px, 550px, 700px);
   border-radius: 10px;
   position: fixed;
   top: 50%;
@@ -22,18 +22,18 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: u.rem(30);
+    gap: u.fluid(320px, 1440px, 18px, 30px);
     width: 70%;
 
     .input-group {
       display: flex;
       flex-direction: column;
-      gap: u.rem(10);
+      gap: u.fluid(320px, 1440px, 6px, 10px);
     }
 
     label {
       font-weight: var(--fw-bold);
-      font-size: u.fluid(320px, 1440px, 16px, 20px);
+      font-size: u.fluid(320px, 1440px, 14px, 20px);
     }
 
     input,
@@ -64,7 +64,7 @@
       font-weight: var(--fw-bold);
       font-size: u.fluid(320px, 1440px, 16px, 20px);
       margin-inline: auto;
-      margin-block-start: u.rem(20);
+      margin-block-start: u.fluid(320px, 1440px, 0px, 20px);
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -85,8 +85,8 @@
   }
 
   &__close-btn {
-    width: u.fluid(320px, 1440px, 30px, 40px);
-    height: u.fluid(320px, 1440px, 30px, 40px);
+    width: u.fluid(320px, 1440px, 25px, 40px);
+    height: u.fluid(320px, 1440px, 25px, 40px);
     color: var(--clr-red);
     position: absolute;
     top: u.rem(10);
