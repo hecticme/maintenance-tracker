@@ -75,7 +75,7 @@ export const Modal = ({ isModalOpen, setIsModalOpen }) => {
           <textarea
             name="description"
             id="description"
-            rows="4"
+            rows="3"
             value={card.description}
             onChange={(e) => handleChange(e)}
           ></textarea>

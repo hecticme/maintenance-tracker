@@ -7,7 +7,7 @@
   place-items: center;
   background-color: var(--clr-white);
   width: u.fluid(320px, 1440px, 280px, 800px);
-  height: u.fluid(320px, 1440px, 550px, 700px);
+  height: calc(100% - u.rem(50));
   border-radius: 10px;
   position: fixed;
   top: 50%;
@@ -22,7 +22,7 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: u.fluid(320px, 1440px, 18px, 30px);
+    gap: u.fluid(320px, 1440px, 12px, 30px);
     width: 70%;
 
     .input-group {
@@ -42,14 +42,14 @@
       background-color: var(--clr-gray);
       border-radius: 5px;
       border: none;
-      padding: u.rem(10);
+      padding: u.fluid(320px, 1440px, 6px, 10px);
       font-size: u.fluid(320px, 1440px, 14px, 18px);
     }
 
     &__time-input {
       display: flex;
       flex-wrap: wrap;
-      gap: u.rem(30);
+      gap: u.fluid(320px, 1440px, 10px, 30px);
 
       .input-group {
         flex-grow: 1;
